@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+
+        <menuitem id="menu_military_module_root" name="Military Module" />
+
+        <menuitem id="menu_military_module" name="Subdivisions" parent="menu_military_module_root"/>
+
+
+        <menuitem id="menu_battalion" name="Battalion"
+                  parent="menu_military_module" action="action_battalion"/>
+        <menuitem id="menu_company" name="Company"
+                  parent="menu_military_module" action="action_company"/>
+        <menuitem id="menu_platoon" name="Platoon"
+                  parent="menu_military_module" action="action_platoon"/>
+
+    </data>
+</odoo>

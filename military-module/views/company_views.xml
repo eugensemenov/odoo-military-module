@@ -1,0 +1,67 @@
+<odoo>
+    <data>
+        <!-- Определение действия -->
+        <record id="action_company" model="ir.actions.act_window">
+            <field name="name">Company</field>
+            <field name="res_model">military_module.company</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a new Company record
+                </p>
+            </field>
+        </record>
+
+        <!-- Дерево представление -->
+        <record id="view_company_tree" model="ir.ui.view">
+            <field name="name">military-module.company.tree</field>
+            <field name="model">military_module.company</field>
+            <field name="arch" type="xml">
+                <tree string="Companies">
+                    <field name="number"/>
+                    <field name="description"/>
+                    <field name="company_type"/>
+                    <field name="commander_id"/>
+                    <field name="people_count"/>
+                    <field name="recruitment_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Форма представление -->
+        <record id="view_company_form" model="ir.ui.view">
+            <field name="name">military-module.company.form</field>
+            <field name="model">military_module.company</field>
+            <field name="arch" type="xml">
+                <form string="Company">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="number"/>
+                                <field name="description"/>
+                                <field name="company_type"/>
+                                <field name="commander_id"/>
+                            </group>
+                            <group>
+                                <field name="people_count"/>
+                                <field name="recruitment_date"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Platoons">
+                                <field name="platoons_ids">
+                                    <tree string="Platoons">
+                                        <field name="number"/>
+                                        <field name="commander_id"/>
+                                        <field name="platoon_type"/>
+                                        <field name="people_count"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

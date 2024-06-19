@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_military-module_military-module,military-module.military-module,model_military-module_military-module,base.group_user,1,1,1,1
+access_battalion_model,military_module.battalion,model_military_module_battalion,base.group_system,1,1,1,1
+access_company_model,military_module.company,model_military_module_company,base.group_system,1,1,1,1
+access_platoon_model,military_module.platoon,model_military_module_platoon,base.group_system,1,1,1,1
+

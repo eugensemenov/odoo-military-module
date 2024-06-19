@@ -1,3 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from .platoon import *
+from .battalion import Battalion
+from .company import Company
+from .platoon import Platoon

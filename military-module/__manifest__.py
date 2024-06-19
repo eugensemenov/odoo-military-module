@@ -14,7 +14,7 @@
     'website': "https://github.com/eugensemenov",
 
     'category': 'HR',
-    'version': '0.1',
+    'version': '0.2',
 
     'depends': [
         'base',
@@ -24,5 +24,9 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/battalion_views.xml',
+        'views/company_views.xml',
+        'views/platoon_views.xml',
+        'views/menu_views.xml'
     ],
 }

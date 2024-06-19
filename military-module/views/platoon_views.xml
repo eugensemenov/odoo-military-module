@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <!-- Определение действия -->
+        <record id="action_platoon" model="ir.actions.act_window">
+            <field name="name">Platoons</field>
+            <field name="res_model">military_module.platoon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a new Platoon record
+                </p>
+            </field>
+        </record>
+
+        <!-- Дерево представление -->
+        <record id="view_platoon_tree" model="ir.ui.view">
+            <field name="name">platoon.tree</field>
+            <field name="model">military_module.platoon</field>
+            <field name="arch" type="xml">
+                <tree string="Platoons">
+                    <field name="number"/>
+                    <field name="description"/>
+                    <field name="platoon_type"/>
+                    <field name="commander_id"/>
+                    <field name="people_count"/>
+                    <field name="recruitment_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Форма представление -->
+        <record id="view_platoon_form" model="ir.ui.view">
+            <field name="name">platoon.form</field>
+            <field name="model">military_module.platoon</field>
+            <field name="arch" type="xml">
+                <form string="Platoon">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="number"/>
+                                <field name="description"/>
+                                <field name="platoon_type"/>
+                                <field name="commander_id"/>
+                            </group>
+                            <group>
+                                <field name="people_count"/>
+                                <field name="recruitment_date"/>
+                                <field name="military_company_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
